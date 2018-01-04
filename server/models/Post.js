@@ -4,8 +4,8 @@ const Schema = mongoose.Schema
 const Post = new Schema({
   img: {type: String, required: true},
   title: {type: String, required: true},
-  user: {type: String, required: true},
+  userName: {type: String, required: true},
   message: {type: String, required: true}
 })
 
-module.export = mongoose.model('Post', Post)
+module.exports = mongoose.model('Post', Post)
