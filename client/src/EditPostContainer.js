@@ -19,7 +19,7 @@ static propTypes = {
 }
 
 componentDidMount () {
-  this.loadBlogPostsFromServer()
+  this.loadBlogPostFromServer()
 }
 
 onTitleChange = (e) => this.setState({ title: e.target.value })
@@ -27,7 +27,7 @@ onMessageChange = (e) => this.setState({ message: e.target.value })
 onImageChange = (e) => this.setState({ img: e.target.value })
 onUserNameChange = (e) => this.setState({ userName: e.target.value })
 
-loadBlogPostsFromServer = () => {
+loadBlogPostFromServer = () => {
   $.ajax({
     url: `/api/blogpost/${this.props.match.params.blogId}`,
     method: 'GET'

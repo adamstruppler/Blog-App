@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import {withRouter} from 'react-router-dom'
-import PostInfo from './PostInfo'
+import BlogPostInfo from './BlogPostInfo'
 import $ from 'jquery'
 import PropTypes from 'prop-types'
 
@@ -48,7 +48,7 @@ class BlogPostContainer extends Component {
       <div>
         {
           this.state.post
-            ? <PostInfo
+            ? <BlogPostInfo
               post={this.state.post}
               comments={this.state.comments}
               submitComment={this.submitComment}

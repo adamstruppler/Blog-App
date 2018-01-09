@@ -15,7 +15,7 @@ class CreateBlogPost extends Component {
   }
 
   static propTypes = {
-    loadBlogPostsFromServer: PropTypes.func.isRequired,
+    loadBlogPostFromServer: PropTypes.func.isRequired,
     history: PropTypes.object.isRequired
   }
 
@@ -33,7 +33,7 @@ class CreateBlogPost extends Component {
       method: 'POST',
       data: post
     }).done((response) => {
-      this.props.loadBlogPostsFromServer()
+      this.props.loadBlogPostFromServer()
       this.props.history.push('/blogpost')
     })
   }

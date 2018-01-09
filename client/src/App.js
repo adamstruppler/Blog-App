@@ -50,7 +50,7 @@ class App extends Component {
       url: `/api/blogpost/${blog._id}`,
       method: 'DELETE'
     }).done((response) => {
-      this.loadBlogPostsFromServer()
+      this.loadBlogPostFromServer()
     })
   }
 
