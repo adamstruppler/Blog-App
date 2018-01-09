@@ -1,9 +1,29 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
+const style = {
+  container: {
+    border: '3px solid black',
+    display: 'flex',
+    flexDirection: 'column',
+    borderRadius: '10px',
+    margin: '2%',
+    background: '#2c3e50'
+  },
+  button: {
+    border: 'none',
+    color: 'white',
+    padding: '15px 32px',
+    textAlign: 'center',
+    textDecoration: 'none',
+    display: 'inline-block',
+    fontSize: '16px'
+  }
+}
+
 const CreatePostForm = ({onTitleChange, onUserNameChange, onMessageChange, onImageChange, handleSubmit}) => {
   return (
-    <div>
+    <div style={style.container}>
       <h3> Create A Post</h3>
       <div>
 
@@ -24,7 +44,7 @@ const CreatePostForm = ({onTitleChange, onUserNameChange, onMessageChange, onIma
             <input type='text' placeholder={'Enter User Name'} onChange={onUserNameChange} />
           </div>
 
-          <div>
+          <div style={style.button}>
             <button onClick={handleSubmit}>Submit Post</button>
           </div>
         </form>

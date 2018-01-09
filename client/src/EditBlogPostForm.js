@@ -1,11 +1,31 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
+const style = {
+  container: {
+    border: '3px solid black',
+    display: 'flex',
+    flexDirection: 'column',
+    borderRadius: '10px',
+    margin: '2%',
+    background: '#2c3e50'
+  },
+  button: {
+    border: 'none',
+    color: 'white',
+    padding: '15px 32px',
+    textAlign: 'center',
+    textDecoration: 'none',
+    display: 'inline-block',
+    fontSize: '16px'
+  }
+}
+
 const EditBlogPostForm = ({
   title, message, img, userName, onTitleChange,
   onMessageChange, onImageChange, onUserNameChange, submitPostToServer
 }) =>
-  <div>
+  <div style={style.container}>
     <h1>Edit Blog Post</h1>
     <div>
       <form>
@@ -30,7 +50,7 @@ const EditBlogPostForm = ({
           <input value={userName} onChange={onUserNameChange} />
         </div>
 
-        <div>
+        <div style={style.button}>
           <button onClick={submitPostToServer}>Submit</button>
         </div>
 
